@@ -1,6 +1,6 @@
 // 非同期処理を行う関数を宣言
 const getGitUsername = () => {
-    const url = "https://github.com/users/Yu134y";
+    const url = "https://api.github.com/users/Yu134y";
 
     // GitHub APIをFetchメソッドで実行
     fetch(url).then(res => res.json())

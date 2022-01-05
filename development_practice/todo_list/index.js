@@ -7,10 +7,10 @@ const todos = JSON.parse(localStorage.getItem("todos"));
 if (todos) {
     todos.forEach(todo => {
         add(todo);
-    })
+    });
 }
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", (event) => {
     event.preventDefault();
     add();
 });
@@ -22,7 +22,6 @@ function add(todo) {
         todoText = todo.text;
     }
 
-
     if (todoText) {
         const li = document.createElement("li");
         li.innerText = todoText;
@@ -32,16 +31,16 @@ function add(todo) {
             li.classList.add("text-decoration-line-through");
         }
 
-        li.addEventListener("contextmenu", function (event) {
+        li.addEventListener("contextmenu", (event) => {
             event.preventDefault();
             li.remove();
             saveData();
         });
 
-        li.addEventListener("click", function() {
+        li.addEventListener("click", () => {
             li.classList.toggle("text-decoration-line-through");
             saveData();
-        })
+        });
 
         ul.appendChild(li);
         input.value = "";

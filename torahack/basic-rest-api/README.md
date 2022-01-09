@@ -1,6 +1,7 @@
 > Create users table
 
-CREATE TABLE users (  
+```
+CREATE TABLE users (
  id INTEGER NOT NULL PRIMARY KEY,
 name TEXT NOT NULL,
 profile TEXT,
@@ -8,6 +9,7 @@ created_at TEXT NOT NULL DEFAULT (DATETIME('now', 'localtime')),
 updated_at TEXT NOT NULL DEFAULT (DATETIME('now', 'localtime')),
 date_of_birth TEXT
 );
+```
 
 > Create sample data
 
@@ -20,7 +22,8 @@ INSERT INTO users (name, profile) VALUES ("Roswaal", "君は私になーぁに�
 ```
 
 > Fetch all data from users table
-> `SELECT \* FROM users;`
+
+`SELECT \* FROM users;`
 
 > curl commands
 

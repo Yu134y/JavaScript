@@ -31,10 +31,8 @@ INSERT INTO users (name, profile) VALUES ("Roswaal", "君は私になーぁに�
 
 ## curl commands
 
-Get all users: `curl -X GET http://localhost:3000/api/v1/users`
-
-Get a user by specified id: `curl -X GET http://localhost:3000/api/v1/users/3`
-
+Get all users: `curl -X GET http://localhost:3000/api/v1/users`  
+Get a user by specified id: `curl -X GET http://localhost:3000/api/v1/users/3`  
 Search users: `curl -X GET http://localhost:3000/api/v1/search`
 
 ## Create following table

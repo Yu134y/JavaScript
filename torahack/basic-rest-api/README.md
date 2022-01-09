@@ -1,4 +1,8 @@
-> Create users table
+## LICENSE
+
+The source code is licensed MIT.
+
+## Create users table
 
 ```
 CREATE TABLE users (
@@ -11,7 +15,7 @@ date_of_birth TEXT
 );
 ```
 
-> Create sample data
+## Create sample data
 
 ```
 INSERT INTO users (name, profile) VALUES ("Subaru", "エミリアたんマジ天使！");
@@ -21,11 +25,11 @@ INSERT INTO users (name, profile) VALUES ("Rem", "はい、スバルくんのレ
 INSERT INTO users (name, profile) VALUES ("Roswaal", "君は私になーぁにを望むのかな？");
 ```
 
-> Fetch all data from users table
+## Fetch all data from users table
 
 `SELECT \* FROM users;`
 
-> curl commands
+## curl commands
 
 ```
 Get all users: curl -X GET http://localhost:3000/api/v1/users
@@ -33,7 +37,7 @@ Get a user by specified id: curl -X GET http://localhost:3000/api/v1/users/3
 Search users: curl -X GET http://localhost:3000/api/v1/search
 ```
 
-> Create following table
+## Create following table
 
 ```
 CREATE TABLE following (
@@ -47,7 +51,7 @@ FOREIGN KEY (followed_id) references users(id)
 );
 ```
 
-> Insert sample records into following table
+## Insert sample records into following table
 
 ```
 INSERT INTO following (following_id, followed_id) values (1,2);

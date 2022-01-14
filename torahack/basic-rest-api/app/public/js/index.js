@@ -1,8 +1,23 @@
 const indexModule = (() => {
-    // 検索ボタンをクリックしたときのイベントリスナー設定
-    document.getElementById('search-btn').addEventListener('click', () => {
-        return searchModule.searchUsers();
-    });
-    // UsersモジュールのfetchAllUsersメソッドを呼び出す
-    return usersModule.fetchAllUsers();
+    const path = location.pathname;
+
+    switch (path) {
+        case '/':
+            // 検索ボタンをクリックしたときのイベントリスナー設定
+            document.getElementById('search-btn').addEventListener('click', () => {
+                return searchModule.searchUsers();
+            });
+            // UsersモジュールのfetchAllUsersメソッドを呼び出す
+            return usersModule.fetchAllUsers();
+        case '/create.html':
+            document.getElementById('save-btn').addEventListener('click', () => {
+                return usersModule.createUser();
+            });
+            document.getElementById('cancel-btn').addEventListener('click', () => {
+                return location.href = '/';
+            });
+            break;
+        default:
+            break;
+    }
 })();
